@@ -1,0 +1,14 @@
+[
+    {
+    "titulo": "Ejemplo 1",
+    "estado": "terminada"
+    },
+    {
+    "titulo": "Ejemplo 2",
+    "estado": "en progreso"
+    },
+    {
+    "titulo": "Ejemplo 3",
+    "estado": "pendiente"
+    }
+]
