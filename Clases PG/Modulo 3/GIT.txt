@@ -1,4 +1,4 @@
-	*********** ACORDEON DE GITHUB ***********
+	*********** GITHUB ***********
 
 ---> Iniciar proyecto en una carpeta <---
 	$git init
