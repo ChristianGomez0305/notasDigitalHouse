@@ -9,3 +9,8 @@
     $npm install express --save
 
 ---> Inicializar variable express en el archivo necesario
+
+    *********** Auto - Actualizar ***********
+
+---> Iniciar proyecto en una carpeta <---
+	$npm install --save-dev nodemon
