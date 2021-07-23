@@ -1,0 +1,11 @@
+	*********** Express ***********
+
+---> Iniciar proyecto en una carpeta <---
+	$npm init -y
+
+---> Modificar en el archivo el nombre de nuestro archivo inicial
+
+---> Instalar Express
+    $npm install express --save
+
+---> Inicializar variable express en el archivo necesario
