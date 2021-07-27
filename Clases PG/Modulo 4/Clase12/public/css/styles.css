@@ -1,0 +1,82 @@
+body{
+    /* Color de fondo abajo de imagen */
+    background-color: blueviolet;
+    /* Imagen de fondo */
+    background-image: url(../img/CharlesBabbage.jpg);
+    /* Repetir imagen en el eje de las x o de las y */
+    background-repeat: no-repeat;
+    /* Posicionar la imagen en cordenada x/y */
+    background-position: center bottom;
+    /* Decidir si la imagen es fija o sube/baja */
+    background-attachment: inherit;
+    /* Tamaño de la imagen */
+    background-size: 400px;
+}
+
+h1{
+    color:brown;
+}
+
+h2{
+    /* Color de la letra */
+    color: blueviolet;
+    /* Tipo de letra */
+    font-family: 'Times New Roman', Times, serif;
+    /* Tamaño de letra */
+    font-size: 20px;
+    /* Estilo de letra, italic es cursiva */
+    font-style: italic;
+    /* Peso de letra, bold es negrita */
+    font-weight: bold;
+    /* Alineacion de la letra */
+    text-align: center;
+    /* Decoracion del texto, como subrayado */
+    text-decoration: underline;
+    /* Transforma el texto a mayusculas, minusculas o tipo oracion */
+    text-transform: lowercase;
+    /* Interlineado en el texto*/
+    line-height: 28px;
+    /* Color del fondo de la letra */
+    background-color: green;
+    /* Transparencia de todo*/
+    opacity: 0.8;
+}
+
+h3{
+    /* Color de la letra */
+    color:aqua;
+    /* Tipo de letra */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Tamaño de letra */
+    font-size: 30px;
+    /* Estilo de letra, italic es cursiva */
+    font-style: oblique;
+    /* Alineacion de la letra */
+    text-align: right;
+    /* Decoracion del texto, como subrayado */
+    text-decoration: overline;
+    /* Transforma el texto a mayusculas, minusculas o tipo oracion */
+    text-transform: uppercase;
+    /* Interlineado en el texto*/
+    line-height: 50px;
+}
+
+.colorNombre{
+    color:blue;
+}
+
+.colorHexa{
+    color: #0000ff;
+}
+
+.colorRGB{
+    color: rgb(0, 0, 255);
+}
+
+.colorRGBA{
+    color: rgba(0, 0, 255, 0.3)
+}
+
+p{
+    background-color: green;
+}
