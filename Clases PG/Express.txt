@@ -1,0 +1,36 @@
+	*********** Express ***********
+
+---> Iniciar proyecto en una carpeta <---
+	$npm init -y
+
+---> Modificar en el archivo el nombre de nuestro archivo inicial
+
+---> Instalar Express
+    $npm install express --save
+
+---> Inicializar variable express en el archivo necesario
+
+    *********** Auto - Actualizar ***********
+
+---> Iniciar proyecto en una carpeta <---
+	$npm install --save-dev nodemon
+
+--> Copiar y pegar esto despues de "text" <--
+	"start": "node app.js",
+    "develop": "nodemon app.js"
+
+--> Copiar y pegar esto en el archivo app.js <--
+
+	const express = require('express');
+	const app = express();
+	const path = require('path');
+
+	const publicPath = path.resolve(__dirname, "./public");
+
+	app.use(express.static(publicPath));
+	app.listen(3000, () => console.log('Servidor corriendo en el puerto 3000'));
+
+	app.get('/', function(req,res){
+		let htmlPath = path.resolve(__dirname, './views/home.html');
+		res.sendFile(htmlPath);
+	})

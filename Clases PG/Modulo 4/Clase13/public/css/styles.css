@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.unico{
+    text-align: center;
+    border: solid 5px blueviolet;
+    width: 900px; 
+    height: 150px;
+}
+.unico2{
+    padding: 30px;
+    margin: 30px;
+    border: solid 5px red;
+}
+.unico3{
+    padding: 10px 30px;
+    margin: 10px 30px;
+    border: dotted 5px blue;
+}
+.unico4{
+    padding: 20px 30px 20px;
+    margin: 20px 30px 20px;
+    border: dashed 5px green;
+}
+.unico5{
+    padding: 40px 30px 40px 30px;
+    margin: 40px 30px 40px 30px;
+    border: double 5px yellowgreen;
+}
+
+@media (max-width: 460px){
+    body {
+        background: red;
+    }
+}
+
+@media (min-width: 460px){
+    body {
+        background: gray;
+    }
+}
+
+@media (min-width: 460px) and (orientation: landscape){
+    body {
+        background: cyan;
+    }
+}

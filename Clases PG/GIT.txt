@@ -1,0 +1,35 @@
+	*********** GITHUB ***********
+
+---> Iniciar proyecto en una carpeta <---
+	$git init
+
+---> Configurar nombre y correo al proyecto <---
+	$git config user.name "ChristianGomez0305"
+	$git config user.email "christian990503@hotmail.com"
+
+---> Configurar nombre y correo globalmente <---
+	$git config --global user.name "ChristianGomez0305"
+	$git config --global user.email "christian990503@hotmail.com"
+
+---> Asignar ruta de github a la carpeta <---
+	$git remote add origin https://...
+	$git remote -v
+
+---> Saber si me falta guardar algun cambio en mi proyecto <---
+	$git status
+
+---> Guardar nuevo archivo o algun cambio <---
+	$git add nombre.extension
+	$git add .
+
+---> Cargar los nuevos cambios para despues subir a la nuve <---
+	$git commit -m "Mensaje"
+
+---> Subir todo lo guardado a la nuve <---
+	$git push origin master
+
+---> Descargar todos los archivos de la nuve en la computadora<---
+	$git clone https://...
+
+---> Actualizar todos los archivos en la computadora<---
+	$git pull origin master https://...
