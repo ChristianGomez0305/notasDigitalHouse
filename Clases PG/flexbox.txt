@@ -1,0 +1,41 @@
+--> display: flex;
+
+--> flex-direction:
+    row
+    row-reverse
+    column
+    column-reverse
+
+--> justifi-content: 
+    flex-start: Alinea elementos al lado izquierdo del contenedor.
+    flex-end: Alinea elementos al lado derecho del contenedor.
+    center: Alinea elementos en el centro del contenedor.
+    space-between: Muestra elementos con la misma distancia entre ellos.
+    space-around: Muestra elementos con la misma separación alrededor de ellos.
+
+--> align-items: -->  align-self: (sobre el eje de las y)
+    flex-start: Alinea elementos a la parte superior del contenedor.
+    flex-end: Alinea elementos a la parte inferior del contenedor.
+    center: Alinea elementos en el centro (verticalmente hablando) del contenedor.
+    baseline: Muestra elementos en la línea base del contenedor
+    stretch: Elementos se estiran para ajustarse al contenedor.
+
+-->  flex-wrap: 
+    nowrap: Cada elemento se ajusta en una sola línea.
+    wrap: los elementos se envuelven alrededor de líneas adicionales.
+    wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.
+
+ --> flex-flow (combinacion de flex-direction y flex wrap)
+
+ -->  align-content:
+    flex-start: Las líneas se posicionan en la parte superior del contenedor.
+    flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+    center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+    space-between: Las líneas se muestran con la misma distancia entre ellas.
+    space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+    stretch: Las líneas se estiran para ajustarse al contenedor.
+
+--> order: num;
+
+--> flex-grow: num;
+
