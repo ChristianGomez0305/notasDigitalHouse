@@ -6,6 +6,7 @@
     --Gris_claro: #ebebeb;
     --Verde: #39b54a;
 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -18,17 +19,42 @@ header{
     background-color: var(--Amarillo);
 }
 main{
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
+.logo-buscador{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logogrande{
+    width: 50%;
+}
 .logogrande img{
-    width: 150px; 
-    height: 80px;
-    margin-top: 10px;
+    width: 90%;
+    margin-top: 25px;
     margin-left: 25px;
 }
 .buscador{
-    padding-left: 20px;
+    padding-top: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.buscador input{
+    border-radius: 5px;
+    border: solid 1px white;
+    margin-right: 10px;
+    width: 85%;
+}
+.buscador .fas{
+    margin-top: 2px;
+    margin-right: 12px;
+    display: flex;
+    position: absolute;
+    background-color: white;
+    width: 16px;
+    height: 30px;
+    align-items: center;
 }
 .burger-menu{
     text-align: center;
@@ -55,10 +81,14 @@ a{
 img{
     width: 100%;
 }
-.cuerpos {
+.mensaje1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.cuerpos{
     margin-top: 0;
-    padding: 25px 30px 0 30px;
-    text-align: center;
+    padding: 20px 30px 0 30px;
     font-size: 12px;
 }
 h3{
@@ -71,14 +101,19 @@ h3{
 .precios{
     font-size: 18px;
     margin: 0;
+    display: flex;
+    width: 30%;
 }
 .descuentos{
     font-size: 16px;
     color: var(--Verde);
     margin: 0;
+    display: flex;
+    width: 70%;
 }
 .descripciones{
     font-size: 16px;
+    padding: 10px 0;
     display: none;
 }
 .cuerposd{
@@ -89,42 +124,172 @@ h3{
 .art1{
     margin: 10px;
 }
+section{
+    display: block;
+}
+
 .detalles{
     border-top: solid 1px #ebebeb;
     background-color: white;
     padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 }
 .imgProd{
     background-color: white;
 }
+.car{
+    display: flex;
+    flex-direction: row-reverse;
+}
 .car i{
-    padding: 7px;
     border: solid 1px var(--Verde);
-    border-radius: 100%;
     color: var(--Verde);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 .menuOp{
     display: none;
 }
+.menuOp2{
+    display: none;
+}
 
 @media (min-width: 361px){
-    .menuOp{
-        display: block;
+    .cuerpos{
+        text-align: center;
     }
-    .menuGen{
-        padding: 0 0 30px 10px;
+    .buscador{
+        padding: 10px 0 0 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .buscador .fas{
+        position: relative;
+        width: 15px;
+        height: 25px;
+    }
+    .buscador input{
+        width: 60%;
+    }
+    .menuOp{
+        display: flex;
+    }
+    .menuOp2{
+        display: flex;
     }
     .burger-menu{
         display: none;
     }
     .art1{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+        margin: 5px 5px 15px 5px;
     }
     .descripciones{
         display: block;
     }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .logo-buscador{
+        justify-content: space-between;
+    }
+    .logogrande{
+        width: 30%;
+    }
+    .logogrande img{
+        width: 100%;
+    }
+    .buscador{
+        margin: 0;
+        width: 30%;
+    }
+    .buscador input{
+        width: 77%;
+    }
+    .mensaje1{
+        width: 35%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .mensaje1 .cuerpos{
+        padding: 0;
+    }
+    .menuGen{
+        display: flex;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .menuOp{
+        display: flex;
+        width: 55%;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .menuOp2{
+        display: flex;
+        width: 45%;
+        justify-content: flex-start;
+    }
+    .menuOp ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: flex-start;
+    }
+    .menuOp ul li{
+        display: flex;
+        padding: 0 5px;
+    }
+    .menuOp2 ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .menuOp2 ul li{
+        display: flex;
+        padding: 0 5px 0 5px;
+    }
+    .menuOp2 ul li a{
+        padding: 0 5px 0 5px;
+    }
 }
 
 @media (min-width: 769px){
-
+    .art1{
+        width: 24%;
+        margin: 10px 5px 0 0;
+    }
+    .productos{
+        justify-content: space-between;
+    }
+    .logogrande{
+        width: 30%;
+    }
+    .logogrande img{
+        margin: 10px 0 0 15px;
+    }
+    .buscador{
+        justify-content: flex-start;
+    }
+    .menuOp2 ul{
+        justify-content: center;
+    }
+    .mensaje1{
+        justify-content: center;
+    }
 }
