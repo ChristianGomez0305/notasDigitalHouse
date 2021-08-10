@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 15</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="formulario">
+        <form action="#" method="GET">
+            <h1>FORMULARIOS</h1>
+
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario" required>
+            <label for="clave">Contraseña:</label>
+            <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="correo@correo.com" required>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="1234567890" required>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" placeholder="años cumplidos" required>
+
+            <label>Genero:</label>
+            <label><input type="radio" name="genero" value="Indistinto" checked>Indistinto</label>
+            <label><input type="radio" name="genero" value="Hombre">Masculino</label>
+            <label><input type="radio" name="genero" value="Mujer">Femenino</label>
+
+            <label>Peliculas vistas:</label>
+            <label><input type="checkbox" name="peliculas" value="ninguna" checked>Ninguna</label>
+            <label><input type="checkbox" name="peliculas" value="megamente">Megamente</label>
+            <label><input type="checkbox" name="peliculas" value="superman">Superman</label>
+
+            <label for="fecha">Fecha de Nacimiento</label>
+            <input type="date" name="fecha" id="fecha" value="1999-05-03" min="1960-01-01" max="2003-01-01">
+
+            <label for="perfil">Seleccione una foto de perfil:</label>
+            <input type="file" name="perfil" id="perfil" accept=".jpg" multiple>
+
+            <label for="color">Seleccione un color:</label>
+            <select name="color" id="color">
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00" selected>Verde</option>
+                <option value="#0000ff">Azul</option>
+                <option value="#770077">Morado</option>
+            </select>
+
+            <label for="comentario">Comentarios:</label>
+            <textarea name="comentario" id="comentario"></textarea>
+
+            <button type="reset">Limpiar</button>
+            <button type="submit">Enviar</button>
+            <button type="button">Boton programado</button>
+        </form>
+    </div>
+</body>
+</html>
