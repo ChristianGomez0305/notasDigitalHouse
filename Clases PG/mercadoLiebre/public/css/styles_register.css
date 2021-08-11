@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    padding: 20px 0 10px;
+    text-align: center;
+}
+.formulario{
+    padding: 20px 0 20px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+form{
+    width: 88%;
+    background-color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+
+}
+button:hover{
+    background-color:brown;
+    color: white;
+}
+input{
+    height: 25px;
+}
+
+input[type=checkbox]{
+    width: 12px;
+    height: 12px;
+}
+input[type=radio]{
+    width: 12px;
+    height: 12px;
+}  
+label{
+    padding: 0 0 0 10px;
+    font-size: 15px;
+}
+button{
+    height: 25px;
+    margin: 4px 0;
+    font-size: 15px;
+}
+@media (min-width: 361px){
+    form{
+        width: 80%;
+    }
+    label{
+        font-size: 20px;
+    }
+    button{
+        height: 30px;
+        font-size: 20px;
+    }
+}
+@media (min-width: 769px){
+    input{
+        width: 25vw;
+        height: 25px;
+    }
+    input[type=checkbox]{
+        width: 12px;
+        height: 12px;
+    }
+    input[type=radio]{
+        width: 12px;
+        height: 12px;
+    }
+    h2{
+        padding: 0;
+    }
+    .formulario{
+        width: 100vw;
+    }
+    form{
+        width: 55vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .divisor{
+        width: 25vw;
+    }
+    .divisor2{
+        width: 25vw;
+    }
+    .divisor3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+    button{
+        margin: 15px 15px 0 15px;
+        width: 190px;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles_register.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <header>
+        <div class="logo-buscador">
+            <div class="logogrande">
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar productos, marcas">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="mensaje1">
+                <p class="cuerpos"><i class="fas fa-hand-holding-usd">Comprá en cuotas y sin tarjeta de crédito</i></p>
+            </div>
+        </div>
+        <nav class="menuGen">
+        <div class="menuOp">
+            <ul type="none">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="menuOp2">
+            <ul type="none">
+                <li><a href="register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li><a href="login">Ingresa</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    </header>
+    <div class="formulario">
+        <form action="/" method="GET">
+            <div class="divisor3">
+                <h2>Registrate</h2>
+            </div>
+            <div class="divisor">
+                <div class="input-form">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
+                </div>
+                <div class="input-form">
+                    <label for="usuario">Nombre de Usuario:</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario" required>
+                </div>
+                <div class="input-form">
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha" id="fecha" min="1960-01-01" max="2021-08-10">
+                </div>
+                <div class="input-form">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+                </div>
+                <div class="input-form">
+                    <label>Perfil de usuario:</label>
+                    <label><input type="radio" name="perfil" id="Cliente">Cliente</label>
+                    <label><input type="radio" name="perfil" id="Vendedor">Vendedor</label>
+                </div>
+            </div>
+            <div class="divisor2">
+                <div class="input-form">
+                    <label>Categorias de interés:</label>
+                    <label><input type="checkbox" name="interes" value="electro">Electro</label>
+                    <label><input type="checkbox" name="interes" value="moda">Moda</label>
+                    <label><input type="checkbox" name="interes" value="hogar">Hogar</label>
+                    <label><input type="checkbox" name="interes" value="jugeteria">Jugeteria</label>
+                    <label><input type="checkbox" name="interes" value="vidaSana">Vida sana</label>
+                </div>
+                <div class="input-form">
+                    <label for="perfil">Seleccione una foto de perfil:</label>
+                    <input type="file" name="perfil" id="perfil" accept=".jpg">
+                </div>
+                <div class="input-form">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <div class="input-form">
+                    <label for="password-confirm">Confirmar Contraseña:</label>
+                    <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirmar Contraseña" required>
+                </div>
+            </div>
+            <div class="divisor3">
+                <div class="input-form">
+                    <button type="submit">Enviar</button>
+                </div>
+                <div class="input-form">
+                    <button type="reset">Borrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

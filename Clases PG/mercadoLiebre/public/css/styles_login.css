@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    padding: 20px 0 10px;
+    text-align: center;
+    width: 100vw;
+}
+.formulario{
+    padding: 20px 0 20px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+    background-color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.input-form input{
+    height: 25px;
+}
+.input-form button{
+    width: 20vw;
+    height: 4vh;
+}
+
+@media (min-width: 361px){
+    form{
+        width: 70%;
+    }
+    .input-form label{
+        font-size: 20px;
+    }
+    .input-form input{
+        width: 30vw;
+        height: 30px;
+    }
+    .input-form button{
+        width: 25vw;
+        height: 5vh;
+    }
+}
+
+@media (min-width: 769px){
+    form{
+        width: 40%;
+    }
+    .input-form input{
+        width: 20vw;
+        height: 30px;
+    }
+    .input-form button{
+        width: 20vw;
+        height: 5vh;
+    }
+}
