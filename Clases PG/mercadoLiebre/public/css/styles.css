@@ -27,35 +27,39 @@ main{
     flex-wrap: wrap;
 }
 .logogrande{
-    width: 50%;
+    width: 40%;
 }
 .logogrande img{
     width: 90%;
-    margin-top: 25px;
-    margin-left: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .buscador{
-    padding-top: 30px;
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
+    margin-left: 10px;
+    padding-top: 25px;
+    width: 40%;
 }
-.buscador input{
+.barra{
+    padding-left: 10px;
+}
+.barra input{
+    width: 100%;
+    height: 3vh;
     border-radius: 5px;
     border: solid 1px white;
-    margin-right: 10px;
-    width: 85%;
 }
-.buscador .fas{
-    margin-top: 2px;
-    margin-right: 12px;
+.buscador form{
     display: flex;
-    position: absolute;
-    background-color: white;
-    width: 16px;
-    height: 30px;
-    align-items: center;
 }
+.boton-buscador button{
+    background-color: white;
+    background-color: transparent;
+    border: none;
+}
+.boton-buscador{
+    margin-left: -18px;
+}
+
 .burger-menu{
     text-align: center;
     color: white;
@@ -168,19 +172,6 @@ section{
     .cuerpos{
         text-align: center;
     }
-    .buscador{
-        padding: 10px 0 0 15px;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    .buscador .fas{
-        position: relative;
-        width: 15px;
-        height: 25px;
-    }
-    .buscador input{
-        width: 60%;
-    }
     .menuOp{
         display: flex;
     }
@@ -213,12 +204,18 @@ section{
     .logogrande img{
         width: 100%;
     }
+    .barra{
+        width: 100%;
+    }
+    .barra input{
+        height: 4vh;
+        padding-left: 10px;
+    }
     .buscador{
-        margin: 0;
         width: 30%;
     }
-    .buscador input{
-        width: 77%;
+    .boton-buscador button{
+        height: 4vh;
     }
     .mensaje1{
         width: 35%;
@@ -278,10 +275,10 @@ section{
         justify-content: space-between;
     }
     .logogrande{
-        width: 30%;
+        width: 18%;
     }
     .logogrande img{
-        margin: 10px 0 0 15px;
+        width: 100%;
     }
     .buscador{
         justify-content: flex-start;
@@ -290,6 +287,19 @@ section{
         justify-content: center;
     }
     .mensaje1{
-        justify-content: center;
+        padding-top: 12px;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+    }
+    .buscador{
+        width: 40%;
+    }
+    .barra input{
+        height: 6vh;
+        padding-left: 10px;
+    }
+    .boton-buscador button{
+        height: 6vh;
     }
 }
