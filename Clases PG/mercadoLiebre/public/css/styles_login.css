@@ -11,13 +11,18 @@ h2{
 .formulario{
     padding: 20px 0 20px 0;
     width: 100vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
+    
+    position: relative;
+    top: 100px;
 }
-form{
+.formulario form{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,10 +43,19 @@ form{
 .input-form button{
     width: 20vw;
     height: 4vh;
+    transition: all 1s;
+}
+.input-form button:hover{
+    background-color: #0022AA;
+    color:white;
+}
+footer{
+    top: 100px;
+    bottom: 0;
 }
 
 @media (min-width: 361px){
-    form{
+    .formulario form{
         width: 70%;
     }
     .input-form label{
@@ -58,8 +72,9 @@ form{
 }
 
 @media (min-width: 769px){
-    form{
+    .formulario form{
         width: 40%;
+        top:150;
     }
     .input-form input{
         width: 20vw;
@@ -68,5 +83,9 @@ form{
     .input-form button{
         width: 20vw;
         height: 5vh;
+    }
+    footer{
+        top:150px;
+        bottom: 0;
     }
 }

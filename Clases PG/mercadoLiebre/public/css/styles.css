@@ -17,12 +17,25 @@ body{
 }
 header{
     background-color: var(--Amarillo);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.banner{
+    position: relative;
+    top: 150px;
 }
 main{
+    position: relative;
     width: 95%;
     margin: auto;
+    top: 150px;
 }
 .logo-buscador{
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
 }
@@ -119,6 +132,7 @@ h3{
     font-size: 16px;
     padding: 10px 0;
     display: none;
+    transition: all 1s;
 }
 .cuerposd{
     padding-top: 10px;
@@ -127,11 +141,21 @@ h3{
 }
 .art1{
     margin: 10px;
+    box-shadow: none;
+    transition: all 1s;
+}
+.art1:hover .car i{
+    transform: rotate(-90deg);
+}
+.art1:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.art1:hover .descripciones{
+    display: block;
 }
 section{
     display: block;
 }
-
 .detalles{
     border-top: solid 1px #ebebeb;
     background-color: white;
@@ -160,6 +184,8 @@ section{
     position: absolute;
     right: 20px;
     top: -15px;
+    
+    transition: all 1s;
 }
 .menuOp{
     display: none;
@@ -167,8 +193,19 @@ section{
 .menuOp2{
     display: none;
 }
+footer{
+    position: relative;
+    top: 150px;
+    background-color: white;
+}
 
 @media (min-width: 361px){
+    .banner{
+        top: 130px;
+    }
+    main{
+        top: 130px;
+    }
     .cuerpos{
         text-align: center;
     }
@@ -182,12 +219,8 @@ section{
         display: none;
     }
     .art1{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
         margin: 5px 5px 15px 5px;
-    }
-    .descripciones{
-        display: block;
     }
     .productos{
         display: flex;
@@ -269,7 +302,7 @@ section{
 @media (min-width: 769px){
     .art1{
         width: 24%;
-        margin: 10px 5px 0 0;
+        margin: 20px 5px 30px 0;
     }
     .productos{
         justify-content: space-between;
@@ -301,5 +334,14 @@ section{
     }
     .boton-buscador button{
         height: 6vh;
+    }
+    .footer{
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foo{
+        padding-bottom: 10px;
+        width: 33%;
     }
 }
