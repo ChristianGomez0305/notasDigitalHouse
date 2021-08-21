@@ -34,3 +34,17 @@
 		let htmlPath = path.resolve(__dirname, './views/home.html');
 		res.sendFile(htmlPath);
 	})
+
+    *********** express-generator ***********
+
+--> Instalarlo globalmente
+	$npm install express-generator -g
+
+--> Configurar nombre y motor
+	$express myApp --ejs
+
+--> Instalar todas las dependencias
+	$npm install
+
+--> Iniciar el servidor
+	$nodemon bin/www
