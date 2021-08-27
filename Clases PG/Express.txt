@@ -48,3 +48,14 @@
 
 --> Iniciar el servidor
 	$nodemon bin/www
+
+	*********** EJS ***********
+
+--> Instalar EJS
+	$npm i ejs --save
+
+--> Configurar ejs en app.js
+	app.set('view engine','ejs');
+
+--> Configurar ruta de las vistas
+	app.set ('views','./ruta');

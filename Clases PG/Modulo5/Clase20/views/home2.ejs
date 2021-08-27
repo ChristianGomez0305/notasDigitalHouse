@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 20</title>
+</head>
+<body>
+    <% for(let i=1; i<=2; i++){ %>
+    <h1>ESTAMOS EN LA PAGINA PRINCIPAL 2, VUELTA <%= i %></h1>
+    <% } %>
+
+    <div>
+        <% for (let pelicula of lista) { %>
+            <h2> Titulo de la pelicula : <%= pelicula %> y el genero es <%= genero %></h2>
+        <% if(enOferta){ %>
+            <p>25% de descuento</p>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>
