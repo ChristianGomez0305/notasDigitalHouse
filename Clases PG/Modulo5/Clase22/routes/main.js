@@ -1,7 +1,17 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const multer = require('multer');
 const mainControlador = require('../controllers/mainController');
+
+let multerDiskStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, '/uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
 
 router.get('/', mainControlador.index);
 
@@ -24,5 +34,7 @@ router.put('/edit', function(req,res){
 router.delete('/delete', function(req,res){
     
 })
+
+
 
 module.exports = router;

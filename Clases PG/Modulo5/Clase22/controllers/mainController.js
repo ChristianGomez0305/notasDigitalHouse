@@ -1,5 +1,6 @@
 const pelicula = 'Batman';
 const listaPelis = ['Peli 1', 'Peli 2', 'Peli 3'];
+let fs = require('fs');
 const mainControlador = {
     index: function(req,res){
         res.render('home', {peli: pelicula});
@@ -7,19 +8,19 @@ const mainControlador = {
     search: function(req,res){
         let palabraBuscada = req.query.nombre;
 
-        let users = [
-            {id: 1, name: "Dario"},
-            {id: 2, name: "Javier"},
-            {id: 3, name: "Maru"},
-            {id: 4, name: "Ale"},
-            {id: 5, name: "Alan"},
-        ];
+        let archivoUsuario = fs.readFileSync('usuarios.json', {encoding: 'utf-8'});
+        let usuarios;
+        if (archivoUsuario == ""){
+            usuarios = [];
+        }else{
+            usuarios = JSON.parse(archivoUsuario);
+        }
 
         let resultado =[];
 
-        for(let i=0; i < users.length; i++){
-            if (users[i].name.includes(palabraBuscada)){
-                resultado.push(users[i]);
+        for(let i=0; i < usuarios.length; i++){
+            if (usuarios[i].nombre.includes(palabraBuscada)){
+                resultado.push(usuarios[i]);
             }
         }
         res.render('resultados', {resultado: resultado})
@@ -31,21 +32,45 @@ const mainControlador = {
         res.render('register');
     },
     list: function(req,res){
-        let users = [
-            {id: 1, name: "Dario"},
-            {id: 2, name: "Javier"},
-            {id: 3, name: "Maru"},
-            {id: 4, name: "Ale"},
-            {id: 5, name: "Alan"},
-        ];
+        let archivoUsuario = fs.readFileSync('usuarios.json', {encoding: 'utf-8'});
+        let usuarios;
+        if (archivoUsuario == ""){
+            usuarios = [];
+        }else{
+            usuarios = JSON.parse(archivoUsuario);
+        }
 
-        res.render('search', {'users': users});
+        res.render('search', {'usuarios': usuarios});
     },
     datesLogin: function(req, res){
 
     },
     create: function(req, res){
-        res.send(req.body);
+
+        // OBTENER INFORMACION DEL HTML
+        let usuario = {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correo: req.body.correo,
+            contraseña: req.body.contraseña,
+        }
+
+        // GUARDAR LA INFORMACION EN JSON
+        let archivoUsuario = fs.readFileSync('usuarios.json', {encoding: 'utf-8'});
+        let usuarios;
+        if (archivoUsuario == ""){
+            usuarios = [];
+        }else{
+            usuarios = JSON.parse(archivoUsuario);
+        }
+
+        usuarios.push(usuario);
+
+        usuariosJSON = JSON.stringify(usuarios);
+
+        fs.writeFileSync('usuarios.json', usuariosJSON);
+
+        res.redirect("/list");
     }
 };
 

@@ -64,4 +64,7 @@
 
 --> Instalar el paquete method-override
 	$npm install method-override --save
+
+--> Instalar multer 
+	$npm install multer
 	
