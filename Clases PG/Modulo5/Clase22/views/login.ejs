@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <div class="botonesCrearIniciar">
+            <div class="iniciar">
+                <a href="/login">Iniciar sesión</a>
+            </div>
+            <div class="crear">
+                <a href="/register">Crear Cuenta</a>
+            </div>
+        </div>
+        <div class="formularios">      
+            <div class="form1"> 
+                <form action="/login/datesLogin?_method=PUT" method="POST">
+                    <div class="input-form">
+                        <label for="correo">Correo Electrónico*</label>
+                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="contraseña">Contraseña*</label>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
+                    </div>
+                    <div class="input-form">
+                        <button type="submit">INGRESAR</button>
+                    </div>
+                    <div class="input-form">
+                        <p>¿Olvidaste tu contraseña? <a href="#"> Recuperar contraseña</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
