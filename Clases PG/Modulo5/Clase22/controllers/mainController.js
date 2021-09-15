@@ -1,6 +1,7 @@
 const pelicula = 'Batman';
 const listaPelis = ['Peli 1', 'Peli 2', 'Peli 3'];
 let fs = require('fs');
+const { userInfo } = require('os');
 const mainControlador = {
     index: function(req,res){
         res.render('home', {peli: pelicula});
@@ -32,7 +33,7 @@ const mainControlador = {
         res.render('register');
     },
     list: function(req,res){
-        let archivoUsuario = fs.readFileSync('usuarios.json', {encoding: 'utf-8'});
+        let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
         let usuarios;
         if (archivoUsuario == ""){
             usuarios = [];
@@ -47,29 +48,49 @@ const mainControlador = {
     },
     create: function(req, res){
 
-        // OBTENER INFORMACION DEL HTML
-        let usuario = {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            correo: req.body.correo,
-            contraseña: req.body.contraseña,
-        }
-
-        // GUARDAR LA INFORMACION EN JSON
-        let archivoUsuario = fs.readFileSync('usuarios.json', {encoding: 'utf-8'});
-        let usuarios;
-        if (archivoUsuario == ""){
-            usuarios = [];
+        if(req.file){
+            // OBTENER INFORMACION DEL HTML
+            let usuario = {
+                firstname: req.body.nombre,
+                lastname: req.body.apellido,
+                email: req.body.correo,
+                password: req.body.contraseña,
+                category: 'user',
+                image: req.file.filename
+            }
+            // GUARDAR LA INFORMACION EN JSON
+            let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
+            let usuarios;
+            if (archivoUsuario == ""){
+                usuarios = [];
+            }else{
+                usuarios = JSON.parse(archivoUsuario);
+            }
+            usuarios.push(usuario);
+            usuariosJSON = JSON.stringify(usuarios,null,2);
+            fs.writeFileSync('./data/users.json', usuariosJSON);
         }else{
-            usuarios = JSON.parse(archivoUsuario);
+            // OBTENER INFORMACION DEL HTML
+            let usuario = {
+                firstname: req.body.nombre,
+                lastname: req.body.apellido,
+                email: req.body.correo,
+                password: req.body.contraseña,
+                category: 'user',
+                image: 'user.png'
+            }
+            // GUARDAR LA INFORMACION EN JSON
+            let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
+            let usuarios;
+            if (archivoUsuario == ""){
+                usuarios = [];
+            }else{
+                usuarios = JSON.parse(archivoUsuario);
+            }
+            usuarios.push(usuario);
+            usuariosJSON = JSON.stringify(usuarios,null,2);
+            fs.writeFileSync('./data/users.json', usuariosJSON);
         }
-
-        usuarios.push(usuario);
-
-        usuariosJSON = JSON.stringify(usuarios);
-
-        fs.writeFileSync('usuarios.json', usuariosJSON);
-
         res.redirect("/list");
     }
 };

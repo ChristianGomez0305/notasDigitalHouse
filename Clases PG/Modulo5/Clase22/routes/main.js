@@ -4,14 +4,17 @@ const router = express.Router();
 const multer = require('multer');
 const mainControlador = require('../controllers/mainController');
 
-let multerDiskStorage = multer.diskStorage({
+let storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '/uploads')
+        let carpeta = path.join(__dirname, '../public/img/profileImages')
+        cb(null, carpeta);
     },
     filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
+        cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname))
     }
 })
+
+const upload = multer({storage});
 
 router.get('/', mainControlador.index);
 
@@ -23,7 +26,7 @@ router.get('/register', mainControlador.register)
 
 router.post('/login', mainControlador.datesLogin)
 
-router.post('/register', mainControlador.create)
+router.post('/register', upload.single('imagenUsuario'), mainControlador.create)
 
 router.get('/list', mainControlador.list)
 
