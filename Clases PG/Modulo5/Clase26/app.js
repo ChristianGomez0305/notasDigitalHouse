@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+// SESSION
+const session = require('express-session');
+app.use(session({secret: 'Secreto!'}));
+
+
 // DECLARAR RUTAS
 const rutasMain = require('./routes/main');
 

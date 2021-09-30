@@ -30,9 +30,16 @@ const validacionRegistro = [
     })
 ]
 
+const validacionLogin = [
+    body('correo').notEmpty().withMessage('Escribe correo electronico'),
+    body('contraseña').notEmpty().withMessage('Escribe tu contraseña'),
+]
+
 //REQUERIR MIDDLEWARES
 var logMiddleware = require('../middlewares/logDBMiddleware');
 const logDBMiddleware = require('../middlewares/logDBMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -48,13 +55,21 @@ const upload = multer({storage});
 
 router.get('/', mainControlador.index);
 
+router.get('/pruebaSession', function(req, res){
+    if(req.session.numeroVisitas == undefined){
+        req.session.numeroVisitas = 0;
+    }
+    req.session.numeroVisitas++;
+    res.send('Session tiene el numero : ' + req.session.numeroVisitas)
+})
+
 router.get('/search', mainControlador.search);
 
 router.get('/login', mainControlador.login)
 
-router.get('/register', mainControlador.register)
+router.get('/register', guestMiddleware, mainControlador.register)
 
-router.post('/login', mainControlador.datesLogin)
+router.post('/login',validacionLogin ,mainControlador.datesLogin)
 
 router.post('/register', upload.single('imagenUsuario'), validacionRegistro, mainControlador.create)
 

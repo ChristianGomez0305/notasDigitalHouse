@@ -15,14 +15,29 @@
         </div>
         <div class="formularios">      
             <div class="form1"> 
-                <form action="/login/datesLogin?_method=PUT" method="POST">
+                <form action="/login" method="POST">
                     <div class="input-form">
+                        <% if(locals.errors && errors){  %>
+                            <div class="errores">
+                                <p><%= errors.msg %></p>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.contraseña){  %>
+                            <div class="errores">
+                                <p><%= errors.contraseña.msg %></p>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.contraseña){  %>
+                            <div class="errores">
+                                <p><%= errors.contraseña.msg %></p>
+                            </div>
+                        <% } %>
                         <label for="correo">Correo Electrónico*</label>
-                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com" required>
+                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com">
                     </div>
                     <div class="input-form">
                         <label for="contraseña">Contraseña*</label>
-                        <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" >
                     </div>
                     <div class="input-form">
                         <button type="submit">INGRESAR</button>

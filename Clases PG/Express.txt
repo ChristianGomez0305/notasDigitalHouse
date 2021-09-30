@@ -72,3 +72,8 @@
 
 --> Instalar express validator
 	$npm i express-validator
+
+	*********** EXPRESS SESSION ***********
+
+--> Instalar express validator
+	$npm i express-session --save

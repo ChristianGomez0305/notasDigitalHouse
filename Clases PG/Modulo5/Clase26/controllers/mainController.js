@@ -4,6 +4,7 @@ let fs = require('fs');
 const { userInfo } = require('os');
 
 const { validationResult } = require('express-validator');
+const { render } = require('ejs');
 
 const mainControlador = {
     index: function(req,res){
@@ -47,7 +48,39 @@ const mainControlador = {
         res.render('search', {'usuarios': usuarios});
     },
     datesLogin: function(req, res){
+        const errores = validationResult(req);
 
+        if (!errores.isEmpty()){
+            return res.render('login', {
+                errors: errores.mapped(),
+                old: req.body
+            })
+        }else{
+            let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
+            let usuarios;
+            if (archivoUsuario == ""){
+                usuarios = [];
+            }else{
+                usuarios = JSON.parse(archivoUsuario);
+            }
+
+            for(let i=0; i < usuarios.length; i++){
+                if (usuarios[i].email == req.body.correo){
+                    if(req.body.contraseña == usuarios[i].password){
+                        var usuarioLogeado = usuarios[i];
+                        break;
+                    }
+                }
+            }
+            if (usuarioLogeado == undefined){
+                return res.render('login', {
+                    errors: [{msg: "Credenciales invalidas"}]
+                })
+            }
+
+            req.session.usuarioLogeado = usuarioLogeado;
+            res.send('success');
+        }
     },
     create: function(req, res){
 
