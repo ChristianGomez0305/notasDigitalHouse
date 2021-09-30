@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+    
+        <main>
+            <h1>LISTA DE USUARIOS</h1>
+            <ul>
+                <% for (let i=0; i < usuarios.length; i++){ %>
+                <li>
+                    <a href="/detail/<%= usuarios[i].id %>"><%= usuarios[i].firstname %></a>
+                </li>
+                <% } %>
+            </ul>
+            <div class="buscador">
+                <h2>Buscar</h2>
+                <form action="/search" method="GET">
+                    <input type="text" name="nombre" id="nombre">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </main>
+    
+        <%- include('./partials/footer.ejs') %>
+</body>
+</html>

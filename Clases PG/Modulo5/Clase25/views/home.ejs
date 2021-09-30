@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <% for(let i=1; i<2; i++){ %>
+    <h1>ESTAMOS EN LA PAGINA PRINCIPAL, VUELTA <%= i %></h1>
+    <% } %>
+
+    <div>
+        <p>El nombre de la pelicula es:</p>
+        <span> <%= peli.toUpperCase() %> </span> 
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

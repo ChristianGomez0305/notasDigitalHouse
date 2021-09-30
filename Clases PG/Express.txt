@@ -67,4 +67,8 @@
 
 --> Instalar multer 
 	$npm install multer
-	
+
+	*********** EXPRESS VALIDATOR ***********
+
+--> Instalar express validator
+	$npm i express-validator

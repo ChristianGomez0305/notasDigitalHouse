@@ -1,0 +1,17 @@
+	*********** EXPRESS VALIDATOR ***********
+
+--> Instalar express validator
+	$npm i express-validator
+
+--> Inicializar las variables
+    const { body } = require('express-validator');
+
+    *********** VALIDACIONES ***********
+
+--> .notEmpty() // Verifica que el campo no este vacio
+--> .isLength({min: 5, max 10}) // Verifica la longitud minima y maxima
+--> .isEmail() // Verifica que sea un email valido
+--> .isInt() // Verifica que sea un numero entero
+--> .withMessage('ESCRIBIR UN MENSAJE DE ERROR')
+--> .bail() //Para cortar las validaciones
+
