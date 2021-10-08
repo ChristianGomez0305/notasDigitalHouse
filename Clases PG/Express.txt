@@ -77,3 +77,13 @@
 
 --> Instalar express validator
 	$npm i express-session --save
+
+	*********** EXPRESS COOKIES ***********
+
+--> Instalar express cookies
+	$npm i cookie-parser --save
+
+	*********** BCRYPTJS ***********
+
+--> Instalar bcryptjs
+	$npm i bcryptjs --save
