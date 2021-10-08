@@ -6,6 +6,10 @@ const path = require('path');
 const session = require('express-session');
 app.use(session({secret: 'Secreto!'}));
 
+// COOKIE
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 
 // DECLARAR RUTAS
 const rutasMain = require('./routes/main');
@@ -13,6 +17,9 @@ const rutasMain = require('./routes/main');
 //REQUERIR MIDDLEWARES
 var logMiddleware = require('./middlewares/logMiddleware');
 app.use(logMiddleware);
+
+var recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
+app.use(recordarmeMiddleware);
 
 // EJS
 app.set('view engine','ejs');

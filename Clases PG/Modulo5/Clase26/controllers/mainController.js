@@ -6,6 +6,8 @@ const { userInfo } = require('os');
 const { validationResult } = require('express-validator');
 const { render } = require('ejs');
 
+const bcrypt = require('bcryptjs');
+
 const mainControlador = {
     index: function(req,res){
         res.render('home', {peli: pelicula});
@@ -66,7 +68,7 @@ const mainControlador = {
 
             for(let i=0; i < usuarios.length; i++){
                 if (usuarios[i].email == req.body.correo){
-                    if(req.body.contraseña == usuarios[i].password){
+                    if(bcrypt.compareSync(req.body.contraseña, usuarios[i].password)){
                         var usuarioLogeado = usuarios[i];
                         break;
                     }
@@ -79,7 +81,12 @@ const mainControlador = {
             }
 
             req.session.usuarioLogeado = usuarioLogeado;
-            res.send('success');
+
+            if(req.body.recordar != undefined){
+                res.cookie('recordar',usuarioLogeado.email, {maxAge: 60000});
+            }
+
+            res.send('success : ' + usuarioLogeado + 'cookie : ' + req.cookies.recordar);
         }
     },
     create: function(req, res){
@@ -99,7 +106,7 @@ const mainControlador = {
                 firstname: req.body.nombre,
                 lastname: req.body.apellido,
                 email: req.body.correo,
-                password: req.body.contraseña,
+                password: bcrypt.hashSync(req.body.contraseña, 10),
                 category: 'user',
                 image: req.file.filename
             }
@@ -120,7 +127,7 @@ const mainControlador = {
                 firstname: req.body.nombre,
                 lastname: req.body.apellido,
                 email: req.body.correo,
-                password: req.body.contraseña,
+                password: bcrypt.hashSync(req.body.contraseña, 10),
                 category: 'user',
                 image: 'user.png'
             }

@@ -265,6 +265,11 @@ h3{
     display: flex;
     width: 100%;
 }
+.recordarme{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 /* RESPONSIVE */
 @media (min-width: 481px){

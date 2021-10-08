@@ -1,5 +1,14 @@
 [
   {
+    "id": 0,
+    "firstname": "Christian",
+    "lastname": "Gomez",
+    "email": "cg@hotmail.com",
+    "password": "1234567",
+    "category": "admin",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
     "id": 1,
     "firstname": "Luis",
     "lastname": "Martínez",
@@ -84,5 +93,13 @@
     "password": "12345678",
     "category": "user",
     "image": "imagenUsuario_1632868003408.jpg"
+  },
+  {
+    "firstname": "Encriptar",
+    "lastname": "Encriptar",
+    "email": "encriptar@correo.com",
+    "password": "$2a$10$phx9RJ3TDfoZIhhCZlPl6ezfBnafCleEjzYDDHwGSogYVMYAsVR2S",
+    "category": "user",
+    "image": "imagenUsuario_1633649310179.jpg"
   }
 ]
