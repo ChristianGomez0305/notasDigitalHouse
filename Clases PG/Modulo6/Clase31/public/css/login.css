@@ -1,0 +1,383 @@
+*{
+    --headerfondo: linear-gradient(180.12deg, #183940 -9.07%, #48172F 99.9%);
+    --verdeagua: #0CF2C9;
+    --bodyfondo: #242626;
+    --formfondo: #323434;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: var(--bodyfondo);
+}
+/* HEADER */
+header{
+    background: var(--headerfondo);
+    color: white;
+}
+.header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mitad1{
+    display: flex;
+    width: 45%;
+    align-items: center;
+    padding: 10px 0 5px 0;
+}
+.mitad2{
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 5px 0;
+}
+.shopping-cart{
+    display: flex;
+}
+.shopping-cart a{
+    text-decoration: none;
+    color: white;
+}
+.shopping-cart a p{
+    display: none;
+    padding-left: 5px;
+}
+.logo{
+    margin-left: 10px;
+    width: 8vw;
+}
+.logo img{
+    width: 100%;
+}
+.linkLogReg a{
+    color: white;
+    text-decoration: none;
+}
+.barra input{
+    border-radius: 5px;
+    padding: 5px;
+    width: 90vw;
+}
+.boton-lupa button{
+    background: var(--verdeagua);
+    padding: 5px 3px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    margin-top: 2px;
+    margin-left: -20px;
+}
+.buscador form{
+    padding: 10px 0;
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+/* MAIN */
+main{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botonesCrearIniciar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.iniciar{
+    display: flex;
+    justify-content: center;
+    background: var(--formfondo);
+    border-radius: 10px 10px 0 0;
+    width: 47%;
+}
+.iniciar a{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    color: var(--verdeagua)
+}
+.crear{
+    display: flex;
+    justify-content: center;
+    background: #1B2325;
+    border-radius: 10px 10px 0 0;
+    width: 47%;
+}
+.crear a{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    color: #828584;
+}
+.formularios{
+    width: 90%;
+    margin: auto;
+    background: var(--formfondo);
+    color: white;
+    border-radius: 0 0 10px 10px ;
+    margin-bottom: 40px;
+}
+.formularios .form1 form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.formularios .form2 form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.input-form{
+    width: 60%;
+    font-size: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.input-form input{
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.input-form label{
+    padding: 10px 0;
+}
+.input-form button{
+    background: var(--verdeagua);
+    border-radius: 10px;
+    height: 40px;
+    margin: 20px 0;
+}
+.input-form p{
+    font-size: 12px;
+    text-align: center;
+}
+.input-form p a{
+    text-decoration: none;
+    color: #EDB1BD;
+}
+.campos p{
+    text-align: left;
+    color: #EDB1BD;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.campos2 p a{
+    text-decoration: none;
+    color: var(--verdeagua);
+}
+.navegador{
+    width: 100%;
+    display: none;
+    margin: auto;
+    padding: 10px 0;
+    background: var(--verdeagua);
+}
+.link-nav{
+    width: 90%;
+    text-align: center;
+}
+.link-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* FOOTER */
+footer{
+    background: var(--headerfondo);
+    color:white;
+}
+.footer{
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.nosotros{
+    width: 50%;
+    padding: 20px;
+}
+.pago-redes{
+    padding: 20px 0 20px 20px;
+    width: 50%;
+}
+.pago i{
+    padding: 5px;
+    font-size: 30px;
+}
+.redes i{
+    margin: 5px;
+    padding: 4px;
+    font-size: 30px;
+    background: var(--verdeagua);
+    color: black;
+    border-radius: 100%;
+}
+.suscripcion{
+    width: 100%;
+    padding: 20px;
+}
+.derechos{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+}
+h3{
+    padding: 10px 0 5px 0;
+    font-size: 14px;
+}
+.barra2 input{
+    border-radius: 5px;
+    padding: 5px;
+    width: 85vw;
+}
+.boton-plane button{
+    background: var(--verdeagua);
+    padding: 5px 3px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    margin-top: 2px;
+    margin-left: -20px;
+}
+.registro form{
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+}
+.recordarme{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+@media (min-width: 481px){
+    /* HEADER */
+    .burger-menu{
+        display: none;
+    }
+    .navegador{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mitad1{
+        width: 20%;
+    }
+    .mitad2{
+        order: 2;
+        width: 30%;
+    }
+    .buscador{
+        padding: 0;
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .buscador form{
+        padding-top: 18px;
+    }
+    .barra{
+        width: 85%;
+    }
+    .barra input{
+        width: 100%;
+    }
+    
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 70%;
+    }
+    .formularios{
+        width: 70%;
+    }
+    /* FOOTER */
+    .nosotros{
+        width: 50%;
+    }
+    .pago i{
+        padding: 10px;
+    }
+    .redes i{
+        margin: 5px 15px;
+    }
+    .suscripcion{
+        width: 70%;
+    }
+    .barra2{
+        width: 90%;
+    }
+    .barra2 input{
+        width: 100%;
+    }
+}
+@media (min-width: 769px){
+    /* HEADER */
+    .logo img{
+        width: 85%;
+    }
+    .shopping-cart a{
+        display: flex;
+        width: 100%;
+    }
+    .shopping-cart a p{
+        display: flex;
+    }
+    .link-nav{
+        font-size: 18px;
+    }
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 40%;
+    }
+    .formularios{
+        width: 40%;
+    }
+    /* FOOTER */
+
+    .nosotros{
+        width: 25%;
+    }
+    .pago-redes{
+        width: 30%;
+    }
+    .suscripcion{
+        width: 25%;
+    }
+}
+@media (min-width: 1280px){
+    /* HEADER */
+    .logo img{
+        width: 75%;
+    }
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 30%;
+    }
+    .formularios{
+        width: 30%;
+    }
+    /* FOOTER */
+
+}

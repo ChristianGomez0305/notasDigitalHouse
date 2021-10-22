@@ -75,7 +75,7 @@
 
 	*********** EXPRESS SESSION ***********
 
---> Instalar express validator
+--> Instalar express session
 	$npm i express-session --save
 
 	*********** EXPRESS COOKIES ***********
@@ -87,3 +87,33 @@
 
 --> Instalar bcryptjs
 	$npm i bcryptjs --save
+
+--> Configurar para quitar mensajes de error
+
+
+	*********** SEQUELIZE ***********
+
+--> Instalar sequelize
+	$npm i -g sequelize
+	$npm i -g sequelize-cli
+
+--> Instalar ORM mysql 
+	$npm i --save mysql2
+
+--> Configurar el archivo en raiz llamado ".sequelizerc"
+
+	const path = require('path');
+	module.exports = {
+		config: path.resolve('./database/config', 'config.js'),
+		'models-path': path.resolve('./database/models'),
+		'seeders-path': path.resolve('./database/seeders'),
+		'migrations-path': path.resolve('./database/migrations'),
+	}
+
+--> Iniciar sequelize
+	Si marca error debes cambiar la configuracion del equipo con "Set-ExecutionPolicy Unrestricted"
+	$sequelize init
+
+--> Configurar el archivo config.js
+	1.- Hacerlo module.exports
+	2.- Configurar la base de datos development, usuario, contraseña, nombre de la DB
