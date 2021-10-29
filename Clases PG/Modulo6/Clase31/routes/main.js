@@ -87,7 +87,7 @@ router.get('/movies', mainControlador.moviesList)
 router.get('/movies/drama', mainControlador.moviesDrama)
 router.get('/movies/top', mainControlador.moviesTop)
 router.get('/movies/:id', mainControlador.moviesDetail)
-
+router.get('/movies/edit/:id', mainControlador.moviesEdit)
 
 
 module.exports = router;

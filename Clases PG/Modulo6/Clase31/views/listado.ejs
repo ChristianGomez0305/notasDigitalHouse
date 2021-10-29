@@ -10,7 +10,11 @@
         <ul>
             <% for(let i=0; i<peliculas.length; i++) { %>
             <li>
-                <a href="/movies/<%= peliculas[i].id%>"><%= peliculas[i].title %></a>
+                <a href="/movies/<%= peliculas[i].id%>">
+                    <%= peliculas[i].title %> 
+                    <% if(peliculas[i].generos) { %> - <%= peliculas[i].generos.name %> 
+                    <% }else{ %> - Sin genero <% } %>
+                </a>
             </li>
             <% } %>
         </ul>

@@ -150,7 +150,9 @@ const mainControlador = {
         }
     },
     moviesList: function(req, res){
-        db.Peliculas.findAll()
+        db.Peliculas.findAll({
+            include: [{association: "generos"}]
+        })
         .then(function(peliculas){
             res.render("listado", {peliculas:peliculas} )
         })
@@ -178,6 +180,12 @@ const mainControlador = {
         })
         .then(function(peliculas){
             res.render("topPeliculas", {peliculas:peliculas} )
+        })
+    },
+    moviesEdit: function(req, res){
+        db.Peliculas.findByPk(req.params.id)
+        .then(function(pelicula){
+            res.render("editarPelicula", {pelicula:pelicula} )
         })
     },
 };
